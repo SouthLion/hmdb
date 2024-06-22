@@ -74,7 +74,7 @@ public class BlogController {
         // 查询用户
         records.forEach(blog ->{
             Long userId = blog.getUserId();
-            User user = userService.getById(userId);
+            com.hmdp.entity.User user = userService.getById(userId);
             blog.setName(user.getNickName());
             blog.setIcon(user.getIcon());
         });
